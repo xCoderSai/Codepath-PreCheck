@@ -1,0 +1,62 @@
+
+    
+    <!-- import the webpage's javascript file -->
+   <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hello!</title>
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>  
+  <body>
+    <h1>Light and Sound Memory Game</h1>
+    
+    <p>
+      Hellooooo! Welcome to my game!
+    
+    </p>
+    <div id="instructions">
+      Enter your number of steps, then press start! (default is 2)<br><br>
+      <input id="numInput" type="number" min="2" max="10" name="numInput" onclick="showStart()"> </input>
+    </div>
+    <button id="btnStart" class ="hidden" onclick="getInput(); defPattern(); startGame()">
+      <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.clker.com%2Fcliparts%2F7%2FI%2Fm%2Fy%2Fo%2Fp%2Fstart-button-hi.png&f=1&nofb=1" id="startPNG">
+      </button>
+    <button id="btnStop" class="hidden" onclick="stopGame()">
+        <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.clker.com%2Fcliparts%2F9%2FG%2FB%2FS%2FR%2FC%2Fstop-button-hi.png&f=1&nofb=1" id="stopPNG">
+      </button>
+    <button id="replay" class="hidden" onclick="replay()">
+        <img src = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ffreevector.co%2Fwp-content%2Fuploads%2F2014%2F04%2F59098-return-arrow-curve-pointing-left.png&f=1&nofb=1" id="replayPNG">
+    </button>
+    <div id="livesArea" >
+      <h2 id="livesHTML" class="hidden">
+        lives: <span id="livesHTML2"></span>
+        progress: <span id="progressHTML"></span>
+      </h2>
+ <!--     <text id="timer">time left: <span id="time"></span></text>   -->
+        </div>
+    <div id="gameButtonArea">
+      <button id = "button1" onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()">
+        
+      </button>
+      <button id = "button2" onclick="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone()">
+        
+      </button>
+      <button id = "button3" onclick="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone()">
+        
+      </button>
+      <button id = "button4" onclick="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone()">
+        
+      </button>
+    </div>
+
+  </body>
+</html>
